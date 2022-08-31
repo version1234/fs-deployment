@@ -6,6 +6,9 @@ const app = express();
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../webPage.html'));
 });
+app.get('/css', function(req, res) {
+    res.sendFile(path.join(__dirname, '../styles.css'));
+});
 
 app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../main.js'))

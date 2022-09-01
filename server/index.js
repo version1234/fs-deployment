@@ -24,9 +24,10 @@ app.get('/css', function(req, res) {
 app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../main.js'))
   });
-  
+
   try {
-    nonExistentFunction();
+    rollbar.error("Error to be displayed")
+    //nonExistentFunction();
   } catch (error) {
     console.error(error);
     // expected output: ReferenceError: nonExistentFunction is not defined

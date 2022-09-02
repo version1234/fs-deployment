@@ -26,7 +26,7 @@ app.get('/js', (req, res) => {
   });
 
   try {
-    rollbar.error("Error to be displayed")
+    rollbar.error("Modified error")
     //nonExistentFunction();
   } catch (error) {
     console.error(error);
